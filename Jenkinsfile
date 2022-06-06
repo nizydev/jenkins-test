@@ -157,7 +157,7 @@ node {
             if (isUnix()) {
                 testStatus = sh returnStdout: true, script: "sfdx force:apex:test:run --testlevel RunLocalTests -u ${HUB_ORG}"
             } else {
-                testStatus = bat returnStdout: true, script: "sfdx force:apex:test:run --testlevel ${TEST_LEVEL} -u ${HUB_ORG} ----tests ${TESTS} --json"
+                testStatus = bat returnStdout: true, script: "sfdx force:apex:test:run --testlevel ${TEST_LEVEL} -u ${HUB_ORG} --tests ${TESTS} --json"
             }
             println(testStatus)
         }
