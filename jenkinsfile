@@ -153,7 +153,7 @@ node {
                 println(dataimport)
             }
         }*/
-        stage('Run Local Test Classes') {
+        stage('Run Test Classes') {
             if (isUnix()) {
                 testStatus = sh returnStdout: true, script: "sfdx force:apex:test:run --testlevel RunLocalTests -u ${HUB_ORG}"
             } else {
