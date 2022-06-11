@@ -11,10 +11,14 @@
     <property name="sf.password" value="${salesforce.password}"/>
     <property name="sf.serverurl" value="${salesforce.loginurl}"/>
     <property name="sf.teslevel" value="${salesforce.testlevel}"/>
-    
+
+    <path id="classpath">
+        <fileset dir="${lib.jar}" included="**/*.jar"></fileset>
+    </path>
+
     <taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
         <classpath>
-            <pathelement location="../ant-salesforce.jar" />        	
+            <pathelement location="${ant.jar}" />        	
         </classpath>
     </taskdef>
 	
