@@ -61,24 +61,24 @@
     </target>
 	
 	<target name="validateDevorg" depends="retrieveFullDev">      
-	  <sf:deploy username="${sf.devorgusername}" password="${sf.devorgpassword}" serverurl="${sf.sandboxurl}" maxPoll="${sf.maxPoll}" deployRoot="fulldev" rollbackOnError="true"
+	  <sf:deploy username="${sf.devorgusername}" password="${sf.devorgpassword}" serverurl="${sf.sandboxurl}" maxPoll="${sf.maxPoll}" deployRoot="../force-app" rollbackOnError="true"
 	  checkOnly="true" testLevel="RunSpecifiedTests"> 
 		<runTest>CLExpirationFlowTest</runTest>
 	  </sf:deploy>
     </target>
 	
 	<target name="validateFulldev" depends="retrieveFullDev,retrieveFullDevChangeSet">
-      <sf:deploy username="${sf.fulldevusername}" password="${sf.fulldevpassword}" serverurl="${sf.sandboxurl}" maxPoll="${sf.maxPoll}" deployRoot="fulldev" rollbackOnError="true"
+      <sf:deploy username="${sf.fulldevusername}" password="${sf.fulldevpassword}" serverurl="${sf.sandboxurl}" maxPoll="${sf.maxPoll}" deployRoot="../force-app" rollbackOnError="true"
 	  checkOnly="true" testLevel="RunSpecifiedTests" runTest="CLExpirationFlowTest"/>
     </target>
 	
     <!-- Deploy the unpackaged set of metadata retrieved with retrieveUnpackaged and run tests in this organization's namespace only-->
     <target name="deployDevOrg" depends="retrieveDevOrg">
-      <sf:deploy username="${sf.devorgusername}" password="${sf.devorgpassword}" serverurl="${sf.sandboxurl}" maxPoll="${sf.maxPoll}" deployRoot="devOrg" rollbackOnError="true"/>
+      <sf:deploy username="${sf.devorgusername}" password="${sf.devorgpassword}" serverurl="${sf.sandboxurl}" maxPoll="${sf.maxPoll}" deployRoot="../force-app" rollbackOnError="true"/>
     </target>
 	
 	<target name="deployFullDev">
-      <sf:deploy username="${sf.fulldevusername}" password="${sf.fulldevpassword}" serverurl="${sf.sandboxurl}" maxPoll="${sf.maxPoll}" deployRoot="fulldev" rollbackOnError="true"/>
+      <sf:deploy username="${sf.fulldevusername}" password="${sf.fulldevpassword}" serverurl="${sf.sandboxurl}" maxPoll="${sf.maxPoll}" deployRoot="../force-app" rollbackOnError="true"/>
     </target>
 	
 	
