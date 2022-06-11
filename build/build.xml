@@ -2,12 +2,16 @@
 
     <property file="build.properties"/>
     <property environment="env"/>
-
+    <property name="ant.jar" value="ant.salesforce.jar"/>
     <!-- Setting default value for username, password and session id properties to empty string 
          so unset values are treated as empty. Without this, ant expressions such as ${sf.username}
          will be treated literally.
     -->    
-
+    <property name="sf.username" value="${salesforce.username}"/>
+    <property name="sf.password" value="${salesforce.password}"/>
+    <property name="sf.serverurl" value="${salesforce.loginurl}"/>
+    <property name="sf.teslevel" value="${salesforce.testlevel}"/>
+    
     <taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
         <classpath>
             <pathelement location="../ant-salesforce.jar" />        	
