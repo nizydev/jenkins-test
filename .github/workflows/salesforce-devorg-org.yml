@@ -113,7 +113,7 @@ jobs:
         
       # Connect with Salesforce ORG
       - name: 'Connect with Salesforce ORG'
-        working-directory: .github/jwt/
+        working-directory: .github/workflows/jwt/
         run: sfdx auth:jwt:grant --clientid ${{ secrets.CONNECTED_APP_CONSUMER_KEY }} --jwtkeyfile server.key --username ${{ secrets.DEVORG_USERNAME }} -d --instanceurl ${{ secrets.SANDBOX_URL }} --setalias ${{ secrets.DEVORG_ALIAS }}
   
       # Run Salesforce CLI Scanner For Security checks
