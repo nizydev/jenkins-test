@@ -130,7 +130,7 @@ jobs:
 
       # Run Apex tests in scratch org
       - name: 'Run Apex tests'
-        run: sfdx force:apex:test:run -c -r human --testlevel 'RunSpecifiedTests' -d ./tests/apex -w 20 --targetusername 'devorg' -t ${{ secrets.TESTS }} }} --codecoverage
+        run: sfdx force:apex:test:run -c -r human --testlevel 'RunSpecifiedTests' -d ./tests/apex -w 20 --targetusername 'devorg' -t ${{ secrets.TESTS }} --codecoverage
 
       # Upload code coverage data
       - name: 'Upload code coverage for Apex to Codecov.io'
