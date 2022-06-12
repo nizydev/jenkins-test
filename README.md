@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 
-[![My first CI](https://github.com/nizydev/jenkins-test/actions/workflows/ant.yml/badge.svg)](https://github.com/nizydev/jenkins-test/actions/workflows/ant.yml)
+[![Validate Against devorg Sandbox Org](https://github.com/nizydev/jenkins-test/actions/workflows/salesforce-devorg-org.yml/badge.svg)](https://github.com/nizydev/jenkins-test/actions/workflows/salesforce-devorg-org.yml)
+
+[![Validate Against fulldev Sandbox Org](https://github.com/nizydev/jenkins-test/actions/workflows/salesforce-fulldev-org.yml/badge.svg)](https://github.com/nizydev/jenkins-test/actions/workflows/salesforce-fulldev-org.yml)
 
 # Salesforce DX Project: Next Steps
 
