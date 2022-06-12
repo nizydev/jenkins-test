@@ -1,7 +1,7 @@
 global with sharing class CLExpirationFlow implements Database.batchable<sobject>,Schedulable {
     global final string query;
     global CLExpirationFlow(string q){  
-        query=q; 
+        query=q;
     }
     global CLExpirationFlow(){  
         
